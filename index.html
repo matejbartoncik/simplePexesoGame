@@ -3,23 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Pexeso game</title>
 </head>
 <body>
-    <h1>Výběr obtížnosti</h1>
-    <p>Vyberte obtížnost:</p>
-    <label>
-        <input type="radio" name="difficulty" > Snadná
-    </label>
-    <label>
-        <input type="radio" name="difficulty" > Střední
-    </label>
-    <label>
-        <input type="radio" name="difficulty" > Těžká
-    </label>
-    <button id="start-button" onclick="pairsMatchDiff()">Začít hru</button>
 
-    <div id="memory-game" style="display: none;">
+    <h1 class="center-align" >Pexeso - The game</h1> 
+
+    <p class="center-align">Vyberte obtížnost:</p>
+    <label class="center-align">
+            <input type="radio" name="difficulty" > Snadná
+    </label>
+    <label class="center-align input">
+            <input type="radio" name="difficulty" > Střední
+    </label>
+    <label class="center-align" >
+            <input type="radio" name="difficulty" class="center-align">Těžká
+    </label>
+        <button id="start-button" onclick="pairsMatchDiff()" class="center-align">Začít hru</button>
+
+    <div id="memory-game" style="display: none; " class="#">
         <!-- Zde budou karty generovány dynamicky -->
     </div>
 
