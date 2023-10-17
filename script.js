@@ -2,6 +2,8 @@ window.addEventListener('onload', function ()  {
         for (let i = 0; i < difficulty.length; i++) {
         difficulty[i].checked = false;
 }});
+
+
 const startButton = document.getElementById("start-button")
 const difficulty = document.getElementsByName("difficulty");
 function pairsMatchDiff() {
@@ -14,5 +16,8 @@ function pairsMatchDiff() {
         pairs = 24;
     }  
 };
+function shuffle() {
+    
+}
 
 

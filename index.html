@@ -1,32 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Pexeso game</title>
-</head>
-<body>
+  </head>
+  <body>
+    <h1 class="center-align">Pexeso - The game</h1>
+    <section name="startSection">
+      <p class="center-align">Vyberte obtížnost:</p>
+      <div class="center-align">
+        <label class="label-style">
+          <input type="radio" name="difficulty" /> Lehká
+        </label>
+      </div>
+      <div class="center-align">
+        <label class="label-style">
+          <input type="radio" name="difficulty" /> Střední
+        </label>
+      </div>
+      <div class="center-align">
+        <label class="label-style">
+          <input type="radio" name="difficulty" class="" />Těžká
+        </label>
+      </div>
+      <div class="center-align">
+        <button
+          id="start-button"
+          onclick="pairsMatchDiff()"
+          class="center-align buton-style"
+        >
+          Začít hru
+        </button>
+      </div>
+    </section>
 
-    <h1 class="center-align" >Pexeso - The game</h1> 
+    <section name="gameBoard">
+      <div class="center-align">
+        <div id="memory-game" class="gameboard18">
+          <!-- Zde budou karty generovány dynamicky -->
+        </div>
+      </div>
+    </section>
 
-    <p class="center-align">Vyberte obtížnost:</p>
-    <label class="center-align">
-            <input type="radio" name="difficulty" > Snadná
-    </label>
-    <label class="center-align input">
-            <input type="radio" name="difficulty" > Střední
-    </label>
-    <label class="center-align" >
-            <input type="radio" name="difficulty" class="center-align">Těžká
-    </label>
-        <button id="start-button" onclick="pairsMatchDiff()" class="center-align">Začít hru</button>
-
-    <div id="memory-game" style="display: none; " class="#">
-        <!-- Zde budou karty generovány dynamicky -->
-    </div>
-
-
-   <script src="script.js"></script> 
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
