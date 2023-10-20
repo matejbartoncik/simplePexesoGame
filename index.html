@@ -10,27 +10,28 @@
     <section name="startSection" class="startSection">
       <h1 class="center-align header">Pexeso - The game</h1>
       <p class="center-align diffSetting">Vyberte obtížnost:</p>
+      
       <div class="diffChoose">
-
         <div class="center-align">
-          <label class="label-style">
-            <input type="radio" name="difficulty" /> Lehká
+          <label class="label-style" onclick="changeBackground()" name="label">
+            <input type="radio" class="skryty" name="difficulty" />
+            <p class="diff">Lehká</p>
           </label>
         </div>
 
         <div class="center-align">
-          <label class="label-style">
-            <input type="radio" name="difficulty" /> Střední
+          <label class="label-style" name="label" onclick="changeBackground()">
+            <input type="radio" class="skryty" name="difficulty" />
+            <p class="diff">Střední</p>
           </label>
         </div>
 
         <div class="center-align">
-          <label class="label-style">
-            <input type="radio" name="difficulty" class="" />Těžká
+          <label class="label-style" onclick="changeBackground()" name="label">
+            <input type="radio" class="skryty" name="difficulty" />
+            <p class="diff">Těžká</p>
           </label>
-
         </div>
-
       </div>
 
       <div class="center-align">
@@ -44,7 +45,7 @@
       </div>
     </section>
 
-    <section name="gameBoard" style="display: none;">
+    <section name="gameBoard" style="display: none">
       <div class="center-align">
         <div id="memory-game" class="gameboard18">
           <!-- Zde budou karty generovány dynamicky -->
