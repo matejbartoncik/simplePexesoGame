@@ -37,7 +37,13 @@ body {
   padding: 2px;
   text-align: center;
 }
-
+.label-checked{
+  background-color: rgb(157, 164, 157);
+  width: 105px;
+  margin-top:10px;
+  padding: 2px;
+  text-align: center;
+}
 .label-style:active{color: wheat;}
 .label-style:hover{
     background-color: rgb(157, 164, 157);
