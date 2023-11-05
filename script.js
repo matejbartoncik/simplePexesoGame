@@ -1,7 +1,8 @@
 const startButton = document.getElementById("start-button");
 const difficulty = document.getElementsByName("difficulty");
 const startSection = document.getElementsByName("startSection")
-const gameBoard = document.getElementsByName("gameBoard")
+const gameDesk = document.getElementsByName("gameBoard")
+const gameBoard = document.getElementById("memory-game")
 let pairs = 0;
 window.addEventListener("onload", function () {
   for (let i = 0; i < difficulty.length; i++) {
@@ -11,7 +12,7 @@ window.addEventListener("onload", function () {
 
 function startGame() {
     startSection[0].style.display="none"
-    gameBoard[0].style.display="block"
+    gameDesk[0].style.display="block"
     pairsMatchDiff()
 }
 function pairsMatchDiff() {
@@ -24,7 +25,7 @@ function pairsMatchDiff() {
   }
 }
 function shuffle() {}
-//haah
+
 function changeBackground() {
   const label = document.getElementsByName("label");
 

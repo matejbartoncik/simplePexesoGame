@@ -58,12 +58,13 @@ body {
 }
 
 /*Starting screen styling*/
+
 .gameboard9 {
   display: grid;
   grid-template-columns: repeat(3, 150px);
   grid-template-rows: repeat(3, 250px);
   gap: 25px;
-  background-color: red;
+  background-color: rgba(23, 33, 78, 0.616);
 }
 .gameboard18 {
   display: grid;
