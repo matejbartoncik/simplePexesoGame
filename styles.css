@@ -19,7 +19,7 @@ body {
     
     
 }
-.skryty{
+.hidden{
     opacity: 0;
     position: absolute;
 }
@@ -61,16 +61,28 @@ body {
 
 .gameboard9 {
   display: grid;
-  grid-template-columns: repeat(3, 150px);
-  grid-template-rows: repeat(3, 250px);
+  grid-template-columns: repeat(5, 225px);
+  grid-template-rows: repeat(4, 225px);
   gap: 25px;
   background-color: rgba(23, 33, 78, 0.616);
 }
 .gameboard18 {
   display: grid;
-  grid-template-columns: repeat(6, 150px);
-  grid-template-rows: repeat(3, 250px);
+  grid-template-columns: repeat(6, 200px);
+  grid-template-rows: repeat(6, 150px);
   gap: 25px;
-
   background-color: rgba(23, 33, 78, 0.616);
+}
+.gameboard27 {
+  display: grid;
+  grid-template-columns: repeat(9, 150px);
+  grid-template-rows: repeat(6, 150px);
+  gap: 25px;
+  background-color: rgba(23, 33, 78, 0.616);
+}
+.gameCard1{
+  display: grid;
+  width: auto;
+  height: auto;
+  background-color: brown;
 }
