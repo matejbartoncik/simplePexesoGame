@@ -1,10 +1,10 @@
 const startButton = document.getElementById("start-button");
 const difficulty = document.getElementsByName("difficulty");
-const startSection = document.getElementsByName("startSection")
-const gameDesk = document.getElementsByName("gameBoard")
-const gameBoard = document.getElementById("memory-game")
-let pairs = 0;
-let cards = 0
+const startSection = document.getElementsByName("startSection");
+const gameDesk = document.getElementsByName("gameBoard");
+const gameBoard = document.getElementById("memory-game");
+let pairs = [];
+
 window.addEventListener("onload", function () {
   for (let i = 0; i < difficulty.length; i++) {
     difficulty[i].checked = false;
@@ -12,42 +12,56 @@ window.addEventListener("onload", function () {
 });
 
 function startGame() {
-    startSection[0].style.display="none"
-    gameDesk[0].style.display="block"
-    pairsMatchDiff()
+  startSection[0].style.display = "none";
+  gameDesk[0].style.display = "block";
+  pairsMatchDiff();
 }
 function pairsMatchDiff() {
+  //tato funkce se spustí po kliknuti na tlacitko start
+  let cards = 0;
+  let totalPairs = 0;
   if (difficulty[0].checked) {
-    pairs = 10;
-    cards = 20; // 20 karet a 10 paru
-    gameBoard.classList.add("gameboard9")
-
+    totalPairs = 10;
+    cards = 20;
+    gameBoard.classList.add("gameboard9");
   } else if (difficulty[1].checked) {
-    pairs = 18;
-   cards = 36; // 36 karet a 18 paru
-    gameBoard.classList.add("gameboard18")
+    totalPairs = 18;
+    cards = 36;
+    gameBoard.classList.add("gameboard18");
   } else if (difficulty[2].checked) {
-    pairs = 27;
-    cards = 54; // 54 karet 27 paru
-    gameBoard.classList.add("gameboard27")
+    totalPairs = 27;
+    cards = 54;
+    gameBoard.classList.add("gameboard27");
   }
-  createCards()
+  generateAndShufflePairs(totalPairs);
 }
 
-
-
-
 function createCards() {
-   for (let i = 0; i < cards; i++) {
-      let randomizer = Math.floor(Math.random()*10)
-     var newCard = document.createElement("div");
-    }
+  for (let i = 0; i < cards; i++) {
+    var newCard = document.createElement("div");
+    newCard.classList.add("gameCard");
+    gameBoard.appendChild(newCard);
   }
+}
 
-  function shuffle() {
-  newCard.classList.add("gameCard")
-  gameBoard.appendChild(newCard)
-
+function generateAndShufflePairs(totalPairs) {
+  
+  const pairs = [];
+  for (let i = 1; i <= totalPairs; i++) {
+    pairs.push(i, i); // Každé číslo přidáme dvakrát (pro páry)
+  }
+  
+  // Náhodné promíchání pole
+  for (let i = pairs.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [pairs[i], pairs[j]] = [pairs[j], pairs[i]];
+  }
+  for (let i = 0; i <= pairs.length; i++) {
+    const j = Math.floor(Math.random() * (totalPairs));
+    let newCard = document.createElement("div");
+    newCard.classList.add(`gameCard${pairs[i]}`);
+    gameBoard.appendChild(newCard);
+  }
 }
 
 function changeBackground() {
@@ -57,9 +71,8 @@ function changeBackground() {
     const isChecked = difficulty[i].checked;
 
     if (isChecked) {
-        label[i].classList.add("label-checked");
-        label[i].classList.remove("label-style");
-        
+      label[i].classList.add("label-checked");
+      label[i].classList.remove("label-style");
     } else {
       label[i].classList.remove("label-checked");
       label[i].classList.add("label-style");

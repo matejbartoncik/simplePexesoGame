@@ -80,9 +80,192 @@ body {
   gap: 25px;
   background-color: rgba(23, 33, 78, 0.616);
 }
-.gameCard1{
+/**game cards - záda*/
+.gameCard1 {
   display: grid;
   width: auto;
   height: auto;
-  background-color: brown;
+  background-color: #ff7f50; /* Coral */
+}
+
+.gameCard2 {
+  display: grid;
+  width: auto;
+  height: auto;
+  background-color: #00ced1; /* Dark Turquoise */
+}
+
+.gameCard3 {
+  display: grid;
+  width: auto;
+  height: auto;
+  background-color: #9932cc; /* Dark Orchid */
+}
+
+.gameCard4 {
+  display: grid;
+  width: auto;
+  height: auto;
+  background-color: #8b4513; /* Saddle Brown */
+}
+
+.gameCard5 {
+  display: grid;
+  width: auto;
+  height: auto;
+  background-color: #2e8b57; /* Sea Green */
+}
+
+.gameCard6 {
+  display: grid;
+  width: auto;
+  height: auto;
+  background-color: #ff4500; /* Orange Red */
+}
+
+.gameCard7 {
+  display: grid;
+  width: auto;
+  height: auto;
+  background-color: #8a2be2; /* Blue Violet */
+}
+
+.gameCard8 {
+  display: grid;
+  width: auto;
+  height: auto;
+  background-color: #20b2aa; /* Light Sea Green */
+}
+
+.gameCard9 {
+  display: grid;
+  width: auto;
+  height: auto;
+  background-color: #ff0000; /* Red */
+}
+
+.gameCard10 {
+  display: grid;
+  width: auto;
+  height: auto;
+  background-color: #00ff7f; /* Spring Green */
+}
+
+.gameCard11 {
+  display: grid;
+  width: auto;
+  height: auto;
+  background-color: #cd853f; /* Peru */
+}
+
+.gameCard12 {
+  display: grid;
+  width: auto;
+  height: auto;
+  background-color: #4169e1; /* Royal Blue */
+}
+
+.gameCard13 {
+  display: grid;
+  width: auto;
+  height: auto;
+  background-color: #ffd700; /* Gold */
+}
+
+.gameCard14 {
+  display: grid;
+  width: auto;
+  height: auto;
+  background-color: #adff2f; /* Green Yellow */
+}
+
+.gameCard15 {
+  display: grid;
+  width: auto;
+  height: auto;
+  background-color: #ffa500; /* Orange */
+}
+
+.gameCard16 {
+  display: grid;
+  width: auto;
+  height: auto;
+  background-color: #8b0000; /* Dark Red */
+}
+
+.gameCard17 {
+  display: grid;
+  width: auto;
+  height: auto;
+  background-color: #9932cc; /* Dark Orchid */
+}
+
+.gameCard18 {
+  display: grid;
+  width: auto;
+  height: auto;
+  background-color: #32cd32; /* Lime Green */
+}
+
+.gameCard19 {
+  display: grid;
+  width: auto;
+  height: auto;
+  background-color: #ff6347; /* Tomato */
+}
+
+.gameCard20 {
+  display: grid;
+  width: auto;
+  height: auto;
+  background-color: #00fa9a; /* Medium Spring Green */
+}
+
+.gameCard21 {
+  display: grid;
+  width: auto;
+  height: auto;
+  background-color: #b22222; /* Fire Brick */
+}
+
+.gameCard22 {
+  display: grid;
+  width: auto;
+  height: auto;
+  background-color: #00ffff; /* Aqua */
+}
+
+.gameCard23 {
+  display: grid;
+  width: auto;
+  height: auto;
+  background-color: #dda0dd; /* Plum */
+}
+
+.gameCard24 {
+  display: grid;
+  width: auto;
+  height: auto;
+  background-color: #a52a2a; /* Brown */
+}
+
+.gameCard25 {
+  display: grid;
+  width: auto;
+  height: auto;
+  background-color: #228b22; /* Forest Green */
+}
+
+.gameCard26 {
+  display: grid;
+  width: auto;
+  height: auto;
+  background-color: #ff00ff; /* Fuchsia */
+}
+
+.gameCard27 {
+  display: grid;
+  width: auto;
+  height: auto;
+  background-color: #f0e68c; /* Khaki */
 }
