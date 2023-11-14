@@ -57,10 +57,16 @@ function generateAndShufflePairs(totalPairs) {
     [pairs[i], pairs[j]] = [pairs[j], pairs[i]];
   }
   for (let i = 0; i <= pairs.length; i++) {
-    const j = Math.floor(Math.random() * (totalPairs));
+    const j = Math.floor(Math.random() * (pairs.length));
     let newCard = document.createElement("div");
-    newCard.classList.add(`gameCard${pairs[i]}`);
+    let frontCard = document.createElement("div");
+    let backCard = document.createElement("div");
+    newCard.classList.add('gameCard');
+    frontCard.classList.add('gameCardFront')
+    backCard.classList.add('gameCardBack')
     gameBoard.appendChild(newCard);
+    gameBoard.appendChild(frontCard);
+    gameBoard.appendChild(backCard);
   }
 }
 
@@ -79,3 +85,5 @@ function changeBackground() {
     }
   }
 }
+
+
