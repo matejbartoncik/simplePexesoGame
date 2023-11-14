@@ -89,39 +89,36 @@ body {
 /**game cards jako celek*/
 
 .gameCard{
-  position: relative;
-  top: 0;
-  left: 0;
+  display: grid;
   width: auto;
   height: auto;
   transform-style: preserve-3d;
   transition: all 0.8s ease;
-  background-color: red;
+  
 }
-
+.gameCardActive{
+  transform: rotateY(180deg);
+}
 .gameCardFront{
-  position: absolute;
-  top: 0;
-  left: 0;
+ display: grid;
+ position: absolute;
   width: 100%;
   height: 100%;
-  border-radius: 10px;
   backface-visibility: hidden;
   overflow: hidden;
-  background: #ffc728;
+  background-color: #ffc728;
   color: #000;
 }
 
 .gameCardBack{
-  position: absolute;
-  top: 0;
-  left: 0;
+ display: grid;
+ position: absolute;
   width: 100%;
   height: 100%;
-  border-radius: 10px;
+ 
   backface-visibility: hidden;
   overflow: hidden;
-  background: #fafafa;
+  background-color: #fafafa;
   color: #333;
   text-align: center;
   transform: rotateY(180deg);

@@ -65,8 +65,8 @@ function generateAndShufflePairs(totalPairs) {
     frontCard.classList.add('gameCardFront')
     backCard.classList.add('gameCardBack')
     gameBoard.appendChild(newCard);
-    gameBoard.appendChild(frontCard);
-    gameBoard.appendChild(backCard);
+    newCard.appendChild(frontCard);
+    newCard.appendChild(backCard);
   }
 }
 
