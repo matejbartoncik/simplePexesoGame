@@ -97,7 +97,7 @@ body {
   transition: all 0.8s ease;
   
 }
-.gameCard:hover{
+.gameCardActive{
   transform: rotateY(180deg);
 }
 .gameCardFront{

@@ -1,3 +1,5 @@
+let newCard = document.createElement("div");
+
 function shufflePairs(totalPairs) {
   const pairs = [];
   for (let i = 1; i <= totalPairs; i++) {
@@ -13,7 +15,7 @@ function shufflePairs(totalPairs) {
 }
 function generatePairs(pairs) {
   for (let i = 0; i <= pairs.length; i++) {
-    let newCard = document.createElement("div");
+      newCard = document.createElement("div")
     let frontCard = document.createElement("div");
     let backCard = document.createElement("div");
     let newImg = document.createElement("img");
@@ -38,3 +40,7 @@ function generatePairs(pairs) {
   }
 
 }
+function rotatingCards() {
+  newCard.classList.add("gameCardActive")
+}
+
