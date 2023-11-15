@@ -90,6 +90,7 @@ body {
 /**game cards jako celek*/
 
 .gameCard{
+  cursor: pointer;
   display: grid;
   width: auto;
   height: auto;
@@ -98,6 +99,12 @@ body {
   
 }
 .gameCardActive{
+  cursor: pointer;
+  display: grid;
+  width: auto;
+  height: auto;
+  transform-style: preserve-3d;
+  transition: all 0.8s ease;
   transform: rotateY(180deg);
 }
 .gameCardFront{
@@ -109,6 +116,7 @@ body {
   overflow: hidden;
   background-color: #ffc728;
   color: #000;
+ 
 }
 
 .gameCardBack{
@@ -116,10 +124,8 @@ body {
  position: absolute;
   width: fit-content;
   height: fit-content;
- 
   backface-visibility: hidden;
   overflow: hidden;
-  
   color: #333;
   text-align: center;
   transform: rotateY(180deg);

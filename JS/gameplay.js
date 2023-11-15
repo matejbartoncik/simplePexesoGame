@@ -1,12 +1,9 @@
-let newCard = document.createElement("div");
-
 function shufflePairs(totalPairs) {
   const pairs = [];
   for (let i = 1; i <= totalPairs; i++) {
     pairs.push(i, i);
   }
-
-
+  
   for (let i = pairs.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [pairs[i], pairs[j]] = [pairs[j], pairs[i]];
@@ -15,14 +12,25 @@ function shufflePairs(totalPairs) {
 }
 function generatePairs(pairs) {
   for (let i = 0; i <= pairs.length; i++) {
-      newCard = document.createElement("div")
+    let newCard = document.createElement("div");
     let frontCard = document.createElement("div");
     let backCard = document.createElement("div");
     let newImg = document.createElement("img");
-
+    /////////  CARD     //////////
+    gameBoard.appendChild(newCard);
     newCard.classList.add("gameCard");
+    newCard.dataset.id = i;
+    
+    ////////  FRONT     ///////////
+    newCard.appendChild(frontCard);
     frontCard.classList.add("gameCardFront");
+    frontCard.dataset.id = i;
+    
+    ////////  BACK    ///////////
+    newCard.appendChild(backCard);
     backCard.classList.add("gameCardBack");
+    backCard.appendChild(newImg);
+    
     newImg.src = `/images/img${pairs[i]}.png`;
     if (difficulty[0].checked) {
       newImg.classList.add("img250");
@@ -31,16 +39,33 @@ function generatePairs(pairs) {
     } else if (difficulty[2].checked) {
       newImg.classList.add("img150");
     }
-
-    gameBoard.appendChild(newCard);
-    newCard.appendChild(frontCard);
-    newCard.appendChild(backCard);
-    backCard.appendChild(newImg);
-
   }
+}
+/*
+let allCards = document.getElementsByClassName("gameCard");
+let allCardsFront = document.getElementsByClassName("gameCardFront")
+let cardID;
+Array.from(allCardsFront).forEach(function(gameCardFront) {
+  gameCardFront.addEventListener("click",function() {
+    cardID = gameCardFront.getAttribute("data-id")
+    console.log(cardID)
+    
+  })
+})
+*/ 
+let allCards = document.getElementsByClassName("gameCard");
+let allCardsFront = document.getElementsByClassName("gameCardFront");
+let cardID;
 
-}
-function rotatingCards() {
-  newCard.classList.add("gameCardActive")
-}
+Array.from(allCards).forEach(function(gameCard) {
+    gameCard.addEventListener("click", function() {
+        cardID = gameCard.getAttribute("data-id");
+        if (cardID) {
+            console.log(cardID);
+        } else {
+            console.log("Atribut 'data-id' není definován pro tuto kartu.");
+        }
+    });
+});
+
 
