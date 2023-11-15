@@ -96,7 +96,7 @@ body {
   transition: all 0.8s ease;
   
 }
-.gameCardActive{
+.gameCard:hover{
   transform: rotateY(180deg);
 }
 .gameCardFront{
@@ -113,17 +113,21 @@ body {
 .gameCardBack{
  display: grid;
  position: absolute;
-  width: 100%;
-  height: 100%;
+  width: fit-content;
+  height: fit-content;
  
   backface-visibility: hidden;
   overflow: hidden;
-  background-color: #fafafa;
+  
   color: #333;
   text-align: center;
   transform: rotateY(180deg);
 }
-
+img{
+  background-color: #000;
+  width: 225px;
+  height: 225px
+}
 
 
 
