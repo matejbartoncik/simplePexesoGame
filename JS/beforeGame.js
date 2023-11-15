@@ -3,7 +3,7 @@ const difficulty = document.getElementsByName("difficulty");
 const startSection = document.getElementsByName("startSection");
 const gameDesk = document.getElementsByName("gameBoard");
 const gameBoard = document.getElementById("memory-game");
-let pairs = [];
+
 
 window.addEventListener("onload", function () {
   for (let i = 0; i < difficulty.length; i++) {
@@ -33,41 +33,7 @@ function pairsMatchDiff() {
     cards = 54;
     gameBoard.classList.add("gameboard27");
   }
-  generateAndShufflePairs(totalPairs);
-}
-
-function createCards() {
-  for (let i = 0; i < cards; i++) {
-    var newCard = document.createElement("div");
-    newCard.classList.add("gameCard");
-    gameBoard.appendChild(newCard);
-  }
-}
-
-function generateAndShufflePairs(totalPairs) {
-  
-  const pairs = [];
-  for (let i = 1; i <= totalPairs; i++) {
-    pairs.push(i, i); // Každé číslo přidáme dvakrát (pro páry)
-  }
-  
-  // Náhodné promíchání pole
-  for (let i = pairs.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [pairs[i], pairs[j]] = [pairs[j], pairs[i]];
-  }
-  for (let i = 0; i <= pairs.length; i++) {
-    const j = Math.floor(Math.random() * (pairs.length));
-    let newCard = document.createElement("div");
-    let frontCard = document.createElement("div");
-    let backCard = document.createElement("div");
-    newCard.classList.add('gameCard');
-    frontCard.classList.add('gameCardFront')
-    backCard.classList.add('gameCardBack')
-    gameBoard.appendChild(newCard);
-    newCard.appendChild(frontCard);
-    newCard.appendChild(backCard);
-  }
+  shufflePairs(totalPairs);
 }
 
 function changeBackground() {
