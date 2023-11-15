@@ -56,6 +56,17 @@ Array.from(allCardsFront).forEach(function(gameCardFront) {
 let allCards = document.getElementsByClassName("gameCard");
 let allCardsFront = document.getElementsByClassName("gameCardFront");
 let cardID;
+let cardFrontID;
+Array.from(allCardsFront).forEach(function(gameCardFront) {
+  gameCard.addEventListener("click", function() {
+      cardID = gameCardFront.getAttribute("data-id");
+      if (cardFrontID) {
+          console.log(cardFrontID);
+      } else {
+          console.log("Atribut 'data-id' není definován pro tuto kartu.");
+      }
+  });
+});
 
 Array.from(allCards).forEach(function(gameCard) {
     gameCard.addEventListener("click", function() {
