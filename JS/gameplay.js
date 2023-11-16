@@ -28,7 +28,7 @@ function generatePairs(pairs) {
     ////////  FRONT     ///////////
     newCard.appendChild(frontCard);
     frontCard.classList.add("gameCardFront");
-    frontCard.dataset.id = i;
+    frontCard.dataset.id = pairs[i];
 
     ////////  BACK    ///////////
     newCard.appendChild(backCard);
