@@ -1,9 +1,13 @@
+let allCards = document.getElementsByClassName("gameCard");
+let allCardsFront = document.getElementsByClassName("gameCardFront");
+let cardID;
+
 function shufflePairs(totalPairs) {
   const pairs = [];
   for (let i = 1; i <= totalPairs; i++) {
     pairs.push(i, i);
   }
-  
+
   for (let i = pairs.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [pairs[i], pairs[j]] = [pairs[j], pairs[i]];
@@ -20,17 +24,17 @@ function generatePairs(pairs) {
     gameBoard.appendChild(newCard);
     newCard.classList.add("gameCard");
     newCard.dataset.id = i;
-    
+
     ////////  FRONT     ///////////
     newCard.appendChild(frontCard);
     frontCard.classList.add("gameCardFront");
     frontCard.dataset.id = i;
-    
+
     ////////  BACK    ///////////
     newCard.appendChild(backCard);
     backCard.classList.add("gameCardBack");
     backCard.appendChild(newImg);
-    
+
     newImg.src = `/images/img${pairs[i]}.png`;
     if (difficulty[0].checked) {
       newImg.classList.add("img250");
@@ -40,43 +44,32 @@ function generatePairs(pairs) {
       newImg.classList.add("img150");
     }
   }
+  rotateCards()
 }
-/*
-let allCards = document.getElementsByClassName("gameCard");
-let allCardsFront = document.getElementsByClassName("gameCardFront")
-let cardID;
-Array.from(allCardsFront).forEach(function(gameCardFront) {
-  gameCardFront.addEventListener("click",function() {
-    cardID = gameCardFront.getAttribute("data-id")
-    console.log(cardID)
-    
-  })
-})
-*/ 
-let allCards = document.getElementsByClassName("gameCard");
-let allCardsFront = document.getElementsByClassName("gameCardFront");
-let cardID;
-let cardFrontID;
-Array.from(allCardsFront).forEach(function(gameCardFront) {
-  gameCard.addEventListener("click", function() {
-      cardID = gameCardFront.getAttribute("data-id");
-      if (cardFrontID) {
-          console.log(cardFrontID);
+
+function Atributes() {
+  Array.from(allCards).forEach((gameCard) =>
+    gameCard.addEventListener("click", function () {
+      cardID = gameCard.getAttribute("data-id");
+      if (cardID) {
+        console.log(cardID);
       } else {
-          console.log("Atribut 'data-id' není definován pro tuto kartu.");
+        console.log("Atribut 'data-id' není definován pro tuto kartu.");
       }
-  });
-});
-
-Array.from(allCards).forEach(function(gameCard) {
-    gameCard.addEventListener("click", function() {
-        cardID = gameCard.getAttribute("data-id");
-        if (cardID) {
-            console.log(cardID);
-        } else {
-            console.log("Atribut 'data-id' není definován pro tuto kartu.");
+    })
+  );
+}
+function rotateCards () {
+  Array.from(allCards).forEach((gameCard) =>
+    gameCard.addEventListener("click", function () {
+      cardID = gameCard.getAttribute("data-id");
+      if (cardID) {
+        if (gameCard.classList.contains("gameCard")) {
+          gameCard.classList.replace("gameCard","gameCardActive")
         }
-    });
-});
-
-
+      } else {
+        console.log("Atribut 'data-id' není definován pro tuto kartu.");
+      }
+    })
+  );
+}
