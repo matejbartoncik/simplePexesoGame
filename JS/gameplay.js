@@ -1,12 +1,11 @@
 let allCards = document.getElementsByClassName("gameCard");
 let allCardsActive = document.getElementsByClassName("gameCardActive");
 let allCardsFront = document.getElementsByClassName("gameCardFront");
-let cardID;
 let activeCardsID = [];
 let clicked = 0;
-const playerOne = true;
+let PLAYER_ONE = true;
 let playerOnePoints = 0;
-const playerTwo = false;
+let PLAYER_TWO = false;
 let playerTwoPoints = 0;
 
 function shufflePairs(totalPairs) {
@@ -51,15 +50,16 @@ function generatePairs(pairs) {
       newImg.classList.add("img150");
     }
   }
-  do {
-    rotateCards();
-  } while (clicked!=2);
+  rotateCards()
 }
 
 function rotateCards() {
+
   Array.from(allCards).forEach((gameCard) =>
-    gameCard.addEventListener("click", function () {
-      cardID = gameCard.getAttribute("data-id");
+  
+  gameCard.addEventListener("click", function () {
+    let cardID;
+        cardID = gameCard.getAttribute("data-id");
       if (cardID) {
         if (gameCard.classList.contains("gameCard")) {
           clicked++;
@@ -81,16 +81,22 @@ function rotateCards() {
 //kontrola páru
 function pairsCheck() {
   if (activeCardsID[0] == activeCardsID[1]) {
-    if (playerOne == true && playerTwo == false) {
+    if (PLAYER_ONE == true && PLAYER_TWO == false) {
       playerOnePoints += playerOnePoints;
-      playerOne = false;
-      playerTwo = true;
-    } else if (playerOne == false && playerTwo == true) {
+      PLAYER_ONE = false;
+      PLAYER_TWO = true;
+    } else if (PLAYER_ONE == false && PLAYER_TWO == true) {
       playerTwoPoints += playerOnePoints;
-      playerOne = true;
-      playerTwo = false;
+      PLAYER_ONE = true;
+      PLAYER_TWO = false;
     }
   } else {
-    console.log("par nenalezen");
+    setTimeout(function() {
+      Array.from(allCardsActive).forEach(gameCardActive => {
+        gameCardActive.classList.replace("gameCardActive","gameCard")
+      });
+      console.log("par nenalezen");
+    },1000)
+    
   }
 }
