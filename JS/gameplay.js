@@ -99,3 +99,4 @@ function pairsCheck() {
   }
 }
 //TODO pridat neco aby par pokud bude nalezeny zustal otoceny obrazkem nahoru
+//aktualni stav dela to ze obrazek zustane ale po tom co hraje dalsi hrac se vsechny obrazky vrati zpet
