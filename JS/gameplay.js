@@ -6,7 +6,7 @@ let activeCardsID = [];
 let clicked = 0;
 const playerOne = true;
 let playerOnePoints = 0;
-const playerTwo = false; 
+const playerTwo = false;
 let playerTwoPoints = 0;
 
 function shufflePairs(totalPairs) {
@@ -51,7 +51,9 @@ function generatePairs(pairs) {
       newImg.classList.add("img150");
     }
   }
-  rotateCards();
+  do {
+    rotateCards();
+  } while (clicked!=2);
 }
 
 function rotateCards() {
@@ -61,36 +63,34 @@ function rotateCards() {
       if (cardID) {
         if (gameCard.classList.contains("gameCard")) {
           clicked++;
-          activeCardsID.push(cardID)
+          activeCardsID.push(cardID);
           gameCard.classList.replace("gameCard", "gameCardActive");
           console.log(clicked);
         }
       } else {
         console.log("Atribut 'data-id' není definován pro tuto kartu.");
       }
-      if (clicked===2) {
-        pairsCheck()
-        clicked=0
-        activeCardsID = []
+      if (clicked === 2) {
+        pairsCheck();
+        clicked = 0;
+        activeCardsID = [];
       }
-    
     })
   );
 }
 //kontrola páru
 function pairsCheck() {
-  if (activeCardsID[0]==activeCardsID[1]) {
-      if (playerOne == true && playerTwo == false) {
-        playerOnePoints +=playerOnePoints
-        playerOne = false;
-        playerTwo = true;
-      }else if (playerOne == false&&playerTwo==true) {
-        playerTwoPoints +=playerOnePoints
-        playerOne = true;
-        playerTwo = false;
-      }
-  }else{
-    console.log("par nenalezen")
-
+  if (activeCardsID[0] == activeCardsID[1]) {
+    if (playerOne == true && playerTwo == false) {
+      playerOnePoints += playerOnePoints;
+      playerOne = false;
+      playerTwo = true;
+    } else if (playerOne == false && playerTwo == true) {
+      playerTwoPoints += playerOnePoints;
+      playerOne = true;
+      playerTwo = false;
+    }
+  } else {
+    console.log("par nenalezen");
   }
 }
