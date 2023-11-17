@@ -1,0 +1,45 @@
+@media only screen and (max-width: 1920px){
+    /*Starting screen styling*/
+
+.gameboard9 {
+    display: grid;
+    grid-template-columns: repeat(5, 200px);
+    grid-template-rows: repeat(4, 200px);
+    gap: 15px;
+    background-color: rgba(23, 33, 78, 0.616);
+  }
+  .gameboard18 {
+    display: grid;
+    grid-template-columns: repeat(6,160px);
+    grid-template-rows: repeat(6, 160px);
+    gap: 15px;
+    margin: 10px;
+    background-color: rgba(23, 33, 78, 0.616);
+  }
+  .gameboard27 {
+    display: grid;
+    grid-template-columns: repeat(9, 140px);
+    grid-template-rows: repeat(6, 140px);
+    gap: 10px;
+    background-color: rgba(23, 33, 78, 0.616);
+  }
+  /*images classes*/
+  .img150{
+    overflow: hidden;
+    min-width: 140px;
+    min-height: 140px;
+    background-color: #000; 
+  }
+  .img175{
+    overflow: hidden;
+    min-width: 160px;
+    min-height: 160px;
+    background-color: #000; 
+  }
+  .img250{
+    overflow: hidden;
+    min-width: 200px;
+    min-height: 200px;
+    background-color: #000; 
+  }
+}
