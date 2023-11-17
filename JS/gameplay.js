@@ -50,16 +50,14 @@ function generatePairs(pairs) {
       newImg.classList.add("img150");
     }
   }
-  rotateCards()
+  rotateCards();
 }
 
 function rotateCards() {
-
   Array.from(allCards).forEach((gameCard) =>
-  
-  gameCard.addEventListener("click", function () {
-    let cardID;
-        cardID = gameCard.getAttribute("data-id");
+    gameCard.addEventListener("click", function () {
+      let cardID;
+      cardID = gameCard.getAttribute("data-id");
       if (cardID) {
         if (gameCard.classList.contains("gameCard")) {
           clicked++;
@@ -81,6 +79,7 @@ function rotateCards() {
 //kontrola páru
 function pairsCheck() {
   if (activeCardsID[0] == activeCardsID[1]) {
+    activeCardsID = [];
     if (PLAYER_ONE == true && PLAYER_TWO == false) {
       playerOnePoints += playerOnePoints;
       PLAYER_ONE = false;
@@ -91,12 +90,12 @@ function pairsCheck() {
       PLAYER_TWO = false;
     }
   } else {
-    setTimeout(function() {
-      Array.from(allCardsActive).forEach(gameCardActive => {
-        gameCardActive.classList.replace("gameCardActive","gameCard")
+    setTimeout(function () {
+      Array.from(allCardsActive).forEach((gameCardActive) => {
+        gameCardActive.classList.replace("gameCardActive", "gameCard");
       });
       console.log("par nenalezen");
-    },1000)
-    
+    }, 1000);
   }
 }
+//TODO pridat neco aby par pokud bude nalezeny zustal otoceny obrazkem nahoru
