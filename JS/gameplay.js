@@ -89,7 +89,9 @@ function pairsCheck(cardID) {
       PLAYER_ONE = true;
       PLAYER_TWO = false;
     }
-  } else if(activeCardsID.includes(cardID)) {
+  } else if(activeCardsID[0] != activeCardsID[1]) { //todo pridat funkci na prohazovani hracu a nedelat to v kontrole paru
+    PLAYER_ONE = false;
+      PLAYER_TWO = true;
     setTimeout(function () {
       Array.from(allCardsActive).forEach((gameCardActive) => {
         gameCardActive.classList.replace("gameCardActive", "gameCard");
@@ -98,5 +100,6 @@ function pairsCheck(cardID) {
     }, 1000);
   }
 }
+
 //TODO pridat neco aby par pokud bude nalezeny zustal otoceny obrazkem nahoru
 //aktualni stav dela to ze obrazek zustane ale po tom co hraje dalsi hrac se vsechny obrazky vrati zpet
