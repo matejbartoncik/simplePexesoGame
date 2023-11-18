@@ -69,7 +69,7 @@ function rotateCards() {
         console.log("Atribut 'data-id' není definován pro tuto kartu.");
       }
       if (clicked === 2) {
-        pairsCheck();
+        pairsCheck(cardID);
         clicked = 0;
         activeCardsID = [];
       }
@@ -77,7 +77,7 @@ function rotateCards() {
   );
 }
 //kontrola páru
-function pairsCheck() {
+function pairsCheck(cardID) {
   if (activeCardsID[0] == activeCardsID[1]) {
     activeCardsID = [];
     if (PLAYER_ONE == true && PLAYER_TWO == false) {
@@ -89,7 +89,7 @@ function pairsCheck() {
       PLAYER_ONE = true;
       PLAYER_TWO = false;
     }
-  } else {
+  } else if(activeCardsID.includes(cardID)) {
     setTimeout(function () {
       Array.from(allCardsActive).forEach((gameCardActive) => {
         gameCardActive.classList.replace("gameCardActive", "gameCard");
