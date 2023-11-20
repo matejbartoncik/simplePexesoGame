@@ -79,27 +79,37 @@ function rotateCards() {
 //kontrola páru
 function pairsCheck(cardID) {
   if (activeCardsID[0] == activeCardsID[1]) {
-    activeCardsID = [];
-    if (PLAYER_ONE == true && PLAYER_TWO == false) {
+    if (PLAYER_ONE = true) {
       playerOnePoints += playerOnePoints;
-      PLAYER_ONE = false;
-      PLAYER_TWO = true;
-    } else if (PLAYER_ONE == false && PLAYER_TWO == true) {
+      playerSwitch();
+    } else {
       playerTwoPoints += playerOnePoints;
-      PLAYER_ONE = true;
-      PLAYER_TWO = false;
+      playerSwitch();
     }
-  } else if(activeCardsID[0] != activeCardsID[1]) { //todo pridat funkci na prohazovani hracu a nedelat to v kontrole paru
-    PLAYER_ONE = false;
-      PLAYER_TWO = true;
+  } else if (activeCardsID[0] != activeCardsID[1]) {
+    //todo pridat funkci na prohazovani hracu a nedelat to v kontrole paru
+
     setTimeout(function () {
       Array.from(allCardsActive).forEach((gameCardActive) => {
         gameCardActive.classList.replace("gameCardActive", "gameCard");
       });
       console.log("par nenalezen");
+      playerSwitch()
     }, 1000);
   }
 }
+function playerSwitch() {
+  activeCardsID = [];
+  if (PLAYER_ONE == true) {
+    PLAYER_ONE = false;
+    PLAYER_TWO = true;
+  } else if (PLAYER_ONE == false) {
+    PLAYER_ONE = true;
+    PLAYER_TWO = false;
+  }
+}
 
-//TODO pridat neco aby par pokud bude nalezeny zustal otoceny obrazkem nahoru
-//aktualni stav dela to ze obrazek zustane ale po tom co hraje dalsi hrac se vsechny obrazky vrati zpet
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+//TODO pridat neco aby par pokud bude nalezeny zustal otoceny obrazkem nahoru    //////////////////////////////
+//aktualni stav dela to ze obrazek zustane ale po tom co hraje dalsi hrac se vsechny obrazky vrati zpet   /////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
