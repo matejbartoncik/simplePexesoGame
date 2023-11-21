@@ -30,12 +30,10 @@ function generatePairs(pairs) {
     gameBoard.appendChild(newCard);
     newCard.classList.add("gameCard");
     newCard.dataset.id = pairs[i];
-
     ////////  FRONT     ///////////
     newCard.appendChild(frontCard);
     frontCard.classList.add("gameCardFront");
     frontCard.dataset.id = pairs[i];
-
     ////////  BACK    ///////////
     newCard.appendChild(backCard);
     backCard.classList.add("gameCardBack");
@@ -62,23 +60,32 @@ function rotateCards() {
         if (gameCard.classList.contains("gameCard")) {
           clicked++;
           activeCardsID.push(cardID);
-          gameCard.classList.replace("gameCard", "gameCardActive");
+          gameCard.classList.toggle("gameCardActive");
           console.log(clicked);
         }
-      } else {
-        console.log("Atribut 'data-id' není definován pro tuto kartu.");
-      }
+      } 
       if (clicked === 2) {
-        pairsCheck(cardID);
+        clickDisable()
+        pairsCheck();
         clicked = 0;
         activeCardsID = [];
       }
     })
   );
 }
-//kontrola páru
-function pairsCheck(cardID) {
+function clickDisable() {
+    Array.from(allCards).forEach((gameCard)=>
+  gameCard.classList.toggle("unclickable")
+  )
+  setTimeout(() => {
+    Array.from(allCards).forEach((gameCard)=>
+  gameCard.classList.toggle("unclickable")
+  )}, 1000);
+}
+
+function pairsCheck() {
   if (activeCardsID[0] == activeCardsID[1]) {
+    
     if (PLAYER_ONE = true) {
       playerOnePoints += playerOnePoints;
       playerSwitch();
@@ -87,17 +94,25 @@ function pairsCheck(cardID) {
       playerSwitch();
     }
   } else if (activeCardsID[0] != activeCardsID[1]) {
-    //todo pridat funkci na prohazovani hracu a nedelat to v kontrole paru
-
-    setTimeout(function () {
-      Array.from(allCardsActive).forEach((gameCardActive) => {
-        gameCardActive.classList.replace("gameCardActive", "gameCard");
-      });
-      console.log("par nenalezen");
-      playerSwitch()
-    }, 1000);
+    pairMismatch()
   }
 }
+
+
+
+function pairMismatch() {
+  
+  setTimeout(function () {
+
+    Array.from(allCardsActive).forEach((gameCardActive) => {
+      gameCardActive.classList.toggle("gameCardActive")
+    });
+    
+    console.log("par nenalezen");
+    playerSwitch()
+  }, 1000);
+}
+
 function playerSwitch() {
   activeCardsID = [];
   if (PLAYER_ONE == true) {

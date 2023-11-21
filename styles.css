@@ -119,6 +119,10 @@ body {
  
 }
 
+.unclickable{
+  pointer-events: none;
+  cursor: not-allowed;
+}
 .gameCardBack{
  display: grid;
  position: absolute;
@@ -130,6 +134,7 @@ body {
   text-align: center;
   transform: rotateY(180deg);
 }
+
 .img150{
   overflow: hidden;
   min-width: 150px;
