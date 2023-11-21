@@ -18,9 +18,9 @@ function shufflePairs(totalPairs) {
     const j = Math.floor(Math.random() * (i + 1));
     [pairs[i], pairs[j]] = [pairs[j], pairs[i]];
   }
-  generatePairs(pairs);
+  generatePairs(pairs, rotateCards);
 }
-function generatePairs(pairs) {
+function generatePairs(pairs, callback) {
   for (let i = 0; i <= pairs.length; i++) {
     let newCard = document.createElement("div");
     let frontCard = document.createElement("div");
@@ -48,11 +48,13 @@ function generatePairs(pairs) {
       newImg.classList.add("img150");
     }
   }
-  rotateCards();
+  callback();
 }
 
 function rotateCards() {
-  Array.from(allCards).forEach((gameCard) =>
+  let allCardsArray = Array.from(allCards);
+
+  allCardsArray.forEach((gameCard) =>
     gameCard.addEventListener("click", function () {
       let cardID;
       cardID = gameCard.getAttribute("data-id");
@@ -61,70 +63,56 @@ function rotateCards() {
           clicked++;
           activeCardsID.push(cardID);
           gameCard.classList.toggle("gameCardActive");
+          gameCard.classList.add("unclickable");
           console.log(clicked);
         }
-      } 
+      }
       if (clicked === 2) {
-        clickDisable()
-        pairsCheck();
+        clickDisable(allCardsArray);
+        pairsCheck(allCardsArray);
         clicked = 0;
         activeCardsID = [];
       }
     })
   );
 }
-function clickDisable() {
-    Array.from(allCards).forEach((gameCard)=>
-  gameCard.classList.toggle("unclickable")
-  )
+
+function clickDisable(allCardsArray) {
+  allCardsArray.forEach((gameCard) => gameCard.classList.add("unclickable"));
   setTimeout(() => {
-    Array.from(allCards).forEach((gameCard)=>
-  gameCard.classList.toggle("unclickable")
-  )}, 1000);
+    allCardsArray.forEach((gameCard) =>
+      gameCard.classList.remove("unclickable")
+    );
+  }, 1000);
 }
 
 function pairsCheck() {
   if (activeCardsID[0] == activeCardsID[1]) {
-    
-    if (PLAYER_ONE = true) {
-      playerOnePoints += playerOnePoints;
+    let allActiveCardsArray = Array.from(allCardsActive);
+    allActiveCardsArray.forEach((gameCardActive) => {
+      gameCardActive.classList.replace("gameCardActive", "gameCardFound");
+    });
+    if ((PLAYER_ONE = true)) {
+      playerOnePoints += playerTwoPoints;
       playerSwitch();
     } else {
-      playerTwoPoints += playerOnePoints;
+      playerTwoPoints += playerTwoPoints;
       playerSwitch();
     }
-  } else if (activeCardsID[0] != activeCardsID[1]) {
-    pairMismatch()
+  } else {
+    pairMismatch();
   }
 }
 
-
-
 function pairMismatch() {
-  
+  let allActiveCardsArray = Array.from(allCardsActive);
   setTimeout(function () {
-
-    Array.from(allCardsActive).forEach((gameCardActive) => {
-      gameCardActive.classList.toggle("gameCardActive")
+    allActiveCardsArray.forEach((gameCardActive) => {
+      gameCardActive.classList.toggle("gameCardActive");
     });
-    
     console.log("par nenalezen");
-    playerSwitch()
+    playerSwitch();
   }, 1000);
 }
 
-function playerSwitch() {
-  activeCardsID = [];
-  if (PLAYER_ONE == true) {
-    PLAYER_ONE = false;
-    PLAYER_TWO = true;
-  } else if (PLAYER_ONE == false) {
-    PLAYER_ONE = true;
-    PLAYER_TWO = false;
-  }
-}
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////
-//TODO pridat neco aby par pokud bude nalezeny zustal otoceny obrazkem nahoru    //////////////////////////////
-//aktualni stav dela to ze obrazek zustane ale po tom co hraje dalsi hrac se vsechny obrazky vrati zpet   /////
-///////////////////////////////////////////////////////////////////////////////////////////////////////////

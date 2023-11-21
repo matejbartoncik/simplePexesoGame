@@ -95,8 +95,15 @@ body {
   width: auto;
   height: auto;
   transform-style: preserve-3d;
-  transition: all 0.8s ease;
+  transition: all 0.7s ease;
   
+}
+.gameCardFound{
+  cursor: pointer;
+  display: grid;
+  width: auto;
+  height: auto;
+  transform: rotateY(180deg);
 }
 .gameCardActive{
   cursor: pointer;
@@ -104,7 +111,7 @@ body {
   width: auto;
   height: auto;
   transform-style: preserve-3d;
-  transition: all 0.8s ease;
+  transition: all 0.59s ease;
   transform: rotateY(180deg);
 }
 .gameCardFront{
@@ -133,6 +140,7 @@ body {
   color: #333;
   text-align: center;
   transform: rotateY(180deg);
+  
 }
 
 .img150{
@@ -140,18 +148,24 @@ body {
   min-width: 150px;
   min-height: 150px;
   background-color: #000; 
+  pointer-events: none;
+  cursor: not-allowed;
 }
 .img175{
   overflow: hidden;
   min-width: 172px;
   min-height: 172px;
   background-color: #000; 
+  pointer-events: none;
+  cursor: not-allowed;
 }
 .img250{
   overflow: hidden;
   min-width: 225px;
   min-height: 225px;
   background-color: #000; 
+  pointer-events: none;
+  cursor: not-allowed;
 }
 
 
