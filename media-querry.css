@@ -37,26 +37,23 @@
   }
 }
 
-@media only screen and (max-width: 1440px) {
+@media only screen and (max-width: 1440px) { /*Small notebook*/
   .gameboard9 {
     display: grid;
-    grid-template-columns: repeat(5, 180px);
-    grid-template-rows: repeat(4, 180px);
-    gap: 15px;
-    background-color: rgba(23, 33, 78, 0.616);
+    grid-template-columns: repeat(5, 137px);
+    grid-template-rows: repeat(4, 137px);
+    gap: 12px;
   }
   .gameboard18 {
     display: grid;
-    grid-template-columns: repeat(6,120px);
-    grid-template-rows: repeat(6, 120px);
-    gap: 7px;
-    margin: 10px;
-    
+    grid-template-columns: repeat(6,115px);
+    grid-template-rows: repeat(6, 115px);
+    gap: 12px;
   }
   .gameboard27 {
-    grid-template-columns: repeat(9, 100px);
-    grid-template-rows: repeat(6, 100px);
-    gap: 10px;
+    grid-template-columns: repeat(9, 75px);
+    grid-template-rows: repeat(6, 75px);
+    gap: 12px;
     
   }
   /*images classes*/
@@ -65,11 +62,11 @@
     min-height: 100px;
   }
   .img175{
-    min-width: 120px;
-    min-height: 120px;
+    min-width: 100px;
+    min-height: 100px;
   }
   .img250{
-    min-width: 180px;
-    min-height: 180px;
+    min-width: 155px;
+    min-height: 155px;
   }
 }

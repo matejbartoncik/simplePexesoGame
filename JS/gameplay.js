@@ -8,6 +8,8 @@ let playerOnePoints = 0;
 let PLAYER_TWO = false;
 let playerTwoPoints = 0;
 
+//UPRAVIT POCTY PEXESA NA 16 , 32 , 64
+
 function shufflePairs(totalPairs) {
   const pairs = [];
   for (let i = 1; i <= totalPairs; i++) {
