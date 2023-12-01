@@ -85,7 +85,7 @@ body {
 
 
 
-/* BBBB */
+
 
 /**game cards jako celek*/
 
@@ -171,3 +171,17 @@ body {
 
 
 /* game cards předek a zadek*/
+.playerSection{
+  width: 100px ;
+  height: 100px;
+  background-color: aqua;
+  padding: 5px;
+}
+.player1{
+  margin: 2px;
+  font-size: large;
+  text-align: center;
+}
+
+
+/*players*/
