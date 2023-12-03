@@ -19,8 +19,8 @@ function shufflePairs(totalPairs) {
   }
   generatePairs(pairs, rotateCards);
 }
-function generatePairs(pairs, callback) {
-  for (let i = 0; i <= pairs.length; i++) {
+function generatePairs(pairs,) {
+  for (let i = 0; i < pairs.length; i++) {
     let newCard = document.createElement("div");
     let frontCard = document.createElement("div");
     let backCard = document.createElement("div");
@@ -47,7 +47,7 @@ function generatePairs(pairs, callback) {
       newImg.classList.add("img150");
     }
   }
-  callback();
+
 }
 
 function rotateCards() {
@@ -89,7 +89,27 @@ function pairsCheck() {
     pairMismatch();
   }
 }
+let helpIndex;
+function winCheck() {
+  let allCardsArray = Array.from(allCards);
+  allCardsArray.forEach((gameCard) => {
 
+    if(gameCard.classList.contains = "gameCardFound"){
+      helpIndex++;
+    }
+  })
+  if (helpIndex==allCardsArray.length) {
+    console.log("konech hry")
+  }
+}
+
+//testovaci funkce
+function makeWin() {
+  let allCardsArray = Array.from(allCards);
+  allCardsArray.forEach((gameCard) => {
+    gameCard.classList.add("gameCardFound")
+  });
+}
 function pairMismatch() {
   let allActiveCardsArray = Array.from(allCardsActive);
   setTimeout(function () {
@@ -120,7 +140,7 @@ function playerSwitch() {
         }
         break;
     }  
-  }, 200);
+  }, 225);
   
 }
 
