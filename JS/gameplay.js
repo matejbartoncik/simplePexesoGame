@@ -3,11 +3,8 @@ let allCardsActive = document.getElementsByClassName("gameCardActive");
 let allCardsFront = document.getElementsByClassName("gameCardFront");
 let activeCardsID = [];
 let clicked = 0;
-let PLAYER_ONE = true;
-let playerOnePoints = 0;
-let PLAYER_TWO = false;
-let playerTwoPoints = 0;
-
+let activePlayer = true;
+let isPair = false;
 //UPRAVIT POCTY PEXESA NA 16 , 32 , 64
 
 function shufflePairs(totalPairs) {
@@ -79,29 +76,16 @@ function rotateCards() {
   );
 }
 
-function clickDisable(allCardsArray) {
-  allCardsArray.forEach((gameCard) => gameCard.classList.add("unclickable"));
-  setTimeout(() => {
-    allCardsArray.forEach((gameCard) =>
-      gameCard.classList.remove("unclickable")
-    );
-  }, 1000);
-}
-
 function pairsCheck() {
   if (activeCardsID[0] == activeCardsID[1]) {
     let allActiveCardsArray = Array.from(allCardsActive);
     allActiveCardsArray.forEach((gameCardActive) => {
       gameCardActive.classList.replace("gameCardActive", "gameCardFound");
     });
-    if ((PLAYER_ONE = true)) {
-      playerOnePoints += playerTwoPoints;
-      playerSwitch();
-    } else {
-      playerTwoPoints += playerTwoPoints;
-      playerSwitch();
-    }
+    isPair = true
+    playerSwitch();
   } else {
+    isPair = false;
     pairMismatch();
   }
 }
@@ -117,4 +101,46 @@ function pairMismatch() {
   }, 1000);
 }
 
+function playerSwitch() {
+  const playerSection1 = document.getElementById("playerSection");
+  const playerSection2 = document.getElementById("playerSection2");
+  setTimeout(() => {
+    switch (isPair) {
+      case true:
+        addScore();
+      case false:
+        if (activePlayer) {
+          playerSection1.style.backgroundColor = "brown";
+          playerSection2.style.backgroundColor = "aqua";
+          activePlayer = false;
+        } else {
+          playerSection1.style.backgroundColor = "aqua";
+          playerSection2.style.backgroundColor = "brown";
+          activePlayer = true;
+        }
+        break;
+    }  
+  }, 200);
+  
+}
 
+function addScore() {
+  const playerScore1 = document.getElementById("player1Score");
+  const player2Score = document.getElementById("player2Score");
+
+  if (activePlayer) {
+    player2Score.innerHTML++;
+  } else {
+    playerScore1.innerHTML++;
+    
+  }
+}
+
+function clickDisable(allCardsArray) {
+  allCardsArray.forEach((gameCard) => gameCard.classList.add("unclickable"));
+  setTimeout(() => {
+    allCardsArray.forEach((gameCard) =>
+      gameCard.classList.remove("unclickable")
+    );
+  }, 1000);
+}

@@ -15,6 +15,7 @@ function startGame() {
   startSection[0].style.display = "none";
   gameDesk[0].style.display = "block";
   pairsMatchDiff();
+  playerSwitch()
 }
 function pairsMatchDiff() {
   //tato funkce se spustí po kliknuti na tlacitko start
@@ -33,6 +34,7 @@ function pairsMatchDiff() {
     cards = 54;
     gameBoard.classList.add("gameboard27");
   }
+  
   shufflePairs(totalPairs);
 }
 
