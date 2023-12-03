@@ -19,7 +19,7 @@ function shufflePairs(totalPairs) {
   }
   generatePairs(pairs, rotateCards);
 }
-function generatePairs(pairs,) {
+function generatePairs(pairs) {
   for (let i = 0; i < pairs.length; i++) {
     let newCard = document.createElement("div");
     let frontCard = document.createElement("div");
@@ -47,7 +47,6 @@ function generatePairs(pairs,) {
       newImg.classList.add("img150");
     }
   }
-
 }
 
 function rotateCards() {
@@ -82,24 +81,25 @@ function pairsCheck() {
     allActiveCardsArray.forEach((gameCardActive) => {
       gameCardActive.classList.replace("gameCardActive", "gameCardFound");
     });
-    isPair = true
+    isPair = true;
     playerSwitch();
   } else {
     isPair = false;
     pairMismatch();
   }
 }
-let helpIndex;
+//TODO - PRIDAT VYHERCE
+let helpIndex = 0;
 function winCheck() {
   let allCardsArray = Array.from(allCards);
   allCardsArray.forEach((gameCard) => {
-
-    if(gameCard.classList.contains = "gameCardFound"){
+    if ((gameCard.classList.contains = "gameCardFound")) {
       helpIndex++;
     }
-  })
-  if (helpIndex==allCardsArray.length) {
-    console.log("konech hry")
+  });
+
+  if (helpIndex == allCardsArray.length) {
+    console.log("konech hry");
   }
 }
 
@@ -107,7 +107,7 @@ function winCheck() {
 function makeWin() {
   let allCardsArray = Array.from(allCards);
   allCardsArray.forEach((gameCard) => {
-    gameCard.classList.add("gameCardFound")
+    gameCard.classList.add("gameCardFound");
   });
 }
 function pairMismatch() {
@@ -139,9 +139,8 @@ function playerSwitch() {
           activePlayer = true;
         }
         break;
-    }  
+    }
   }, 225);
-  
 }
 
 function addScore() {
@@ -152,7 +151,6 @@ function addScore() {
     player2Score.innerHTML++;
   } else {
     playerScore1.innerHTML++;
-    
   }
 }
 
