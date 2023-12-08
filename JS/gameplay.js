@@ -5,7 +5,7 @@ let activeCardsID = [];
 let clicked = 0;
 let activePlayer = true;
 let isPair = false;
-//UPRAVIT POCTY PEXESA NA 16 , 32 , 64
+//UPRAVIT POCTY PEXESA NA 16 , 32 , 48
 
 function shufflePairs(totalPairs) {
   const pairs = [];
@@ -48,7 +48,8 @@ function generatePairs(pairs) {
     }
   }
 }
-
+//TODO PRIDAT ANIMACE PRO ROZDAVANI KARET A POTOM ABY KARTY ZMIZELI AZ HRA SKONCI
+//TODO PRIDAT FUNKCI PRO UKONCENI HRY (MYSLIM ZE JE MOZNE TO ZVLADNOUT NA SPICE UPU)
 function rotateCards() {
   let allCardsArray = Array.from(allCards);
 
@@ -88,8 +89,11 @@ function pairsCheck() {
     pairMismatch();
   }
 }
-//TODO - PRIDAT VYHERCE
+
 function winCheck() {
+  const playerScore1 = document.getElementById("player1Score");
+  const player2Score = document.getElementById("player2Score");
+
   let helpIndex = 0;
   let allCardsArray = Array.from(allCards);
   allCardsArray.forEach((gameCard) => {
@@ -99,11 +103,15 @@ function winCheck() {
   });
 
   if (helpIndex == allCardsArray.length) {
-    console.log("konech hry");
+    if (playerScore1.innerHTML>player2Score.innerHTML) {
+      console.log("hrac 1 win")
+    } else {
+      console.log("hrac 2 win")
+    }
   }
 }
 
-//testovaci funkce
+//testovaci funkce - pozdeji odstranit
 function makeWin() {
   let allCardsArray = Array.from(allCards);
   allCardsArray.forEach((gameCard) => {
