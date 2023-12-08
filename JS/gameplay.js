@@ -89,8 +89,8 @@ function pairsCheck() {
   }
 }
 //TODO - PRIDAT VYHERCE
-let helpIndex = 0;
 function winCheck() {
+  let helpIndex = 0;
   let allCardsArray = Array.from(allCards);
   allCardsArray.forEach((gameCard) => {
     if ((gameCard.classList.contains = "gameCardFound")) {
