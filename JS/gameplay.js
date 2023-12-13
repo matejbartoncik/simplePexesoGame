@@ -19,7 +19,7 @@ function shufflePairs(totalPairs) {
   }
   generatePairs(pairs, rotateCards);
 }
-function generatePairs(pairs) {
+function generatePairs(pairs, callback) {
   for (let i = 0; i < pairs.length; i++) {
     let newCard = document.createElement("div");
     let frontCard = document.createElement("div");
@@ -47,6 +47,7 @@ function generatePairs(pairs) {
       newImg.classList.add("img150");
     }
   }
+  callback()
 }
 //TODO PRIDAT ANIMACE PRO ROZDAVANI KARET A POTOM ABY KARTY ZMIZELI AZ HRA SKONCI
 //TODO PRIDAT FUNKCI PRO UKONCENI HRY (MYSLIM ZE JE MOZNE TO ZVLADNOUT NA SPICE UPU)
