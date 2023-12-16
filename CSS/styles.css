@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Playpen+Sans:wght@500;700&family=Rubik+Scribble&display=swap');
+
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -7,7 +11,9 @@ body {
   background-color: #08082b;
   height: 980px;
 }
-
+.font-setter{
+  font-family: 'Playpen Sans', sans-serif;
+}
 .center-align {
   display: flex;
   justify-content: center;
@@ -16,9 +22,6 @@ body {
 /*Reusable HAA*/
 .startSection{
     background-color: red;
-    margin-top: 12%;
-    
-    
 }
 .hidden{
     opacity: 0;
