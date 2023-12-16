@@ -2,7 +2,7 @@ const { postcss } = require('tailwindcss');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  mode="jit",
+  mode:"jit",
   purge: {
     enabled: true,
     content: ["./**/*.{html,js}",
