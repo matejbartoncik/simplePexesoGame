@@ -20,6 +20,10 @@ body {
   align-items: center;
 }
 /*Reusable HAA*/
+.NavButton{
+  transition: all 0.5s ease;
+}
+/*Navbar*/
 .startSection{
     background-color: red;
 }
