@@ -19,6 +19,12 @@ body {
   justify-content: center;
   align-items: center;
 }
+.padX2{
+  padding-bottom: 2px;
+  padding-top: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
 /*Reusable HAA*/
 .NavButton{
   transition: all 0.5s ease;
