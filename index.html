@@ -3,36 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link rel="stylesheet" href="CSS/styles.css"> 
     <link rel="stylesheet" href="CSS/output.css">
-    <link rel="stylesheet" href="CSS/styles.css">
     <link rel="stylesheet" href="/CSS/media-querry.css" />
 
     <title>Pexeso game</title>
   </head>
   <body>
-    <section name="startSection" class="startSection">
-      <h1 class="center-align header">Pexeso - The game</h1>
+    <section name="startSection" class="startSection bg-blue-200">
+      <h1 class="center-align header text-violet-500">Pexeso - The game</h1>
       <p class="center-align diffSetting">Vyberte obtížnost:</p>
       
       <div class="diffChoose">
-        <div class="center-align">
+
+        <div class="flex justify-center">
           <label class="label-style" onclick="changeBackground()" name="label">
             <input type="radio" class="hidden" name="difficulty" />
-            <p class="diff">Lehká</p>
+            <p class="bg-violet-200 my-1 text-center">Lehká</p>
           </label>
         </div>
 
-        <div class="center-align">
-          <label class="label-style" name="label" onclick="changeBackground()">
+        <div class="flex justify-center ">
+          <label class="label-style" name="label" >
             <input type="radio" class="hidden" name="difficulty" />
-            <p class="diff">Střední</p>
+            <p class="bg-violet-200 my-1 ">Střední</p>
           </label>
         </div>
 
-        <div class="center-align">
+        <div class="flex justify-center">
           <label class="label-style" onclick="changeBackground()" name="label">
             <input type="radio" class="hidden" name="difficulty" />
-            <p class="diff">Těžká</p>
+            <p class="bg-violet-200 my-1">Těžká</p>
           </label>
         </div>
       </div>

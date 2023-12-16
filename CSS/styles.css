@@ -32,17 +32,11 @@ body {
 .diffChoose{font-size: 35px;
 }
 .label-style {
-  background-color: rgb(0, 132, 0);
-  width: 105px;
-  margin-top:10px;
-  padding: 2px;
+  width: 125px;
   text-align: center;
 }
 .label-checked{
-  background-color: rgb(157, 164, 157);
-  width: 105px;
-  margin-top:10px;
-  padding: 2px;
+  width: 125px;
   text-align: center;
 }
 .label-style:active{color: wheat;}
