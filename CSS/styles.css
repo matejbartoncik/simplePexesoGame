@@ -29,6 +29,9 @@ body {
 }
 .diffSetting{font-size: 40px;
 }
+.lineheight{
+    height: 50px;
+}
 .diffChoose{font-size: 35px;
 }
 .label-style {

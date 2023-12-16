@@ -1,13 +1,16 @@
 {
   "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss-cli": "^11.0.0",
     "tailwindcss": "^3.3.6"
   },
   "name": "simplepexesogame",
   "version": "1.0.0",
   "main": "tailwind.config.js",
-  
   "scripts": {
-    "build":"npx tailwindcss -i ./CSS/input.css -o ./CSS/output.css --watch"
+    "watch": "postcss  ./CSS/input.css -o ./CSS/output.css --watch",
+    "build": "postcss  ./CSS/input.css -o ./CSS/output.css",
+    "dev" : "tailwind -i ./CSS/input.css -o ./CSS/output.css --watch"
   },
   "keywords": [],
   "author": "",
