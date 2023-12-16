@@ -1,18 +1,16 @@
-const { postcss } = require('tailwindcss');
+
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  mode:"jit",
-  purge: {
-    enabled: true,
-    content: ["./**/*.{html,js}",
-    "/JS/**/*..js"],
-  },
+  darkMode: false, // or 'media' or 'class'
   content: ["./**/*.{html,js}",
   "/JS/**/*..js"],
   theme: {
     extend: {},
   },
-  plugins: [postcss],
-}
+  variants: {
+    extend: {},
+  },
+  plugins: [],
+} 
 
