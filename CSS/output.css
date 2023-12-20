@@ -565,13 +565,25 @@ video {
   display: none;
 }
 
-.h-10 {
-  height: 2.5rem;
+.h-1\/2 {
+  height: 50%;
+}
+
+.h-11 {
+  height: 2.75rem;
 }
 
 .w-fit {
   width: -moz-fit-content;
   width: fit-content;
+}
+
+.w-1 {
+  width: 0.25rem;
+}
+
+.w-1\/2 {
+  width: 50%;
 }
 
 .items-center {
@@ -604,11 +616,6 @@ video {
   background-color: rgb(191 219 254 / var(--tw-bg-opacity));
 }
 
-.bg-gray-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
-}
-
 .bg-orange-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(251 146 60 / var(--tw-bg-opacity));
@@ -622,6 +629,102 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[url\(\'\.\/images\/PexesoBG\.jpg\'\)\] {
+  background-image: url('./images/PexesoBG.jpg');
+}
+
+.bg-\[url\(\'\'\)\] {
+  background-image: url('');
+}
+
+.bg-\[url\(\'images\\PexesoBG\.jpg\'\)\] {
+  background-image: url('images\PexesoBG.jpg');
+}
+
+.bg-\[url\(\'C\:\\Users\\matej\\simplePexesoGame\\images\\img27\.png\'\)\] {
+  background-image: url('C:\Users\matej\simplePexesoGame\images\img27.png');
+}
+
+.bg-\[url\(\'simplePexesoGame\\images\\img27\.png\'\)\] {
+  background-image: url('simplePexesoGame\images\img27.png');
+}
+
+.bg-\[url\(\'simplePexesoGame\\images\\img2\.png\'\)\] {
+  background-image: url('simplePexesoGame\images\img2.png');
+}
+
+.bg-\[url\(\'simplePexesoGame\\images\\img\.png\'\)\] {
+  background-image: url('simplePexesoGame\images\img.png');
+}
+
+.bg-\[url\(\'simplePexesoGame\\images\\im\.png\'\)\] {
+  background-image: url('simplePexesoGame\images\im.png');
+}
+
+.bg-\[url\(\'simplePexesoGame\\images\\i\.png\'\)\] {
+  background-image: url('simplePexesoGame\images\i.png');
+}
+
+.bg-\[url\(\'simplePexesoGame\\images\\\.png\'\)\] {
+  background-image: url('simplePexesoGame\images\.png');
+}
+
+.bg-\[url\(\'simplePexesoGame\\images\\p\.png\'\)\] {
+  background-image: url('simplePexesoGame\images\p.png');
+}
+
+.bg-\[url\(\'simplePexesoGame\\images\\pe\.png\'\)\] {
+  background-image: url('simplePexesoGame\images\pe.png');
+}
+
+.bg-\[url\(\'simplePexesoGame\\images\\pex\.png\'\)\] {
+  background-image: url('simplePexesoGame\images\pex.png');
+}
+
+.bg-\[url\(\'simplePexesoGame\\images\\pexe\.png\'\)\] {
+  background-image: url('simplePexesoGame\images\pexe.png');
+}
+
+.bg-\[url\(\'simplePexesoGame\\images\\pexes\.png\'\)\] {
+  background-image: url('simplePexesoGame\images\pexes.png');
+}
+
+.bg-\[url\(\'simplePexesoGame\\images\\P\.png\'\)\] {
+  background-image: url('simplePexesoGame\images\P.png');
+}
+
+.bg-\[url\(\'simplePexesoGame\\images\\Pe\.png\'\)\] {
+  background-image: url('simplePexesoGame\images\Pe.png');
+}
+
+.bg-\[url\(\'simplePexesoGame\\images\\Pex\.png\'\)\] {
+  background-image: url('simplePexesoGame\images\Pex.png');
+}
+
+.bg-\[url\(\'simplePexesoGame\\images\\Pexe\.png\'\)\] {
+  background-image: url('simplePexesoGame\images\Pexe.png');
+}
+
+.bg-\[url\(\'simplePexesoGame\\images\\Pexesp\.png\'\)\] {
+  background-image: url('simplePexesoGame\images\Pexesp.png');
+}
+
+.bg-\[url\(\'simplePexesoGame\\images\\Pexes\.png\'\)\] {
+  background-image: url('simplePexesoGame\images\Pexes.png');
+}
+
+.bg-\[url\(\'simplePexesoGame\\images\\Pexeso\.png\'\)\] {
+  background-image: url('simplePexesoGame\images\Pexeso.png');
+}
+
+.bg-\[url\(\'simplePexesoGame\\images\\PexesoB\.png\'\)\] {
+  background-image: url('simplePexesoGame\images\PexesoB.png');
+}
+
+.bg-\[url\(\'simplePexesoGame\\images\\PexesoBG\.png\'\)\] {
+  background-image: url('simplePexesoGame\images\PexesoBG.png');
 }
 
 .text-center {
@@ -638,6 +741,11 @@ video {
   line-height: 1;
 }
 
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -649,48 +757,4 @@ video {
 .text-violet-500 {
   --tw-text-opacity: 1;
   color: rgb(139 92 246 / var(--tw-text-opacity));
-}
-
-.outline {
-  outline-style: solid;
-}
-
-.outline-4 {
-  outline-width: 4px;
-}
-
-.outline-orange-300 {
-  outline-color: #fdba74;
-}
-
-.duration-300 {
-  transition-duration: 300ms;
-}
-
-.hover\:scale-105:hover {
-  --tw-scale-x: 1.05;
-  --tw-scale-y: 1.05;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.hover\:bg-gradient-to-br:hover {
-  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
-}
-
-.hover\:from-orange-400:hover {
-  --tw-gradient-from: #fb923c var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(251 146 60 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.hover\:from-60\%:hover {
-  --tw-gradient-from-position: 60%;
-}
-
-.hover\:to-red-500:hover {
-  --tw-gradient-to: #ef4444 var(--tw-gradient-to-position);
-}
-
-.hover\:to-red-400:hover {
-  --tw-gradient-to: #f87171 var(--tw-gradient-to-position);
 }

@@ -28,6 +28,13 @@ body {
   padding-right: 10px;
 }
 /*Reusable HAA*/
+.imgCenter{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  background-image: url("images/PexesoBG.jpg");
+}
 .NavButton{
   transition: all 0.5s ease;
   background-image: none;
