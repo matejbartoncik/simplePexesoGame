@@ -38,7 +38,7 @@ function generatePairs(pairs, callback) {
     backCard.classList.add("gameCardBack");
     backCard.appendChild(newImg);
 
-    newImg.src = `/images/img${pairs[i]}.png`;
+    newImg.src = `images/img${pairs[i]}.png`;
     if (difficulty[0].checked) {
       newImg.classList.add("img250");
     } else if (difficulty[1].checked) {

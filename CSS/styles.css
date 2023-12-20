@@ -1,6 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Playpen+Sans:wght@500;700&family=Rubik+Scribble&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=League+Spartan:wght@400;500&display=swap');
 
 * {
   margin: 0;
@@ -28,22 +28,59 @@ body {
   padding-right: 10px;
 }
 /*Reusable HAA*/
-.imgCenter{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  background-image: url("images/PexesoBG.jpg");
-}
 .NavButton{
   transition: all 0.5s ease;
   background-image: none;
 }
 .NavButton:hover{
-  background-color: #fdba74;
+  background-color: #fdb754;
   scale: 1.05;
 }
 /*Navbar*/
+.extraLarge{
+  font-size: 168px;
+}
+.borderCustom{
+  -webkit-text-stroke: 4px #2e2e2e;
+}
+.dropShadow{
+  text-shadow: 
+  -1px -1px 1px #efede3, 
+  0px 1px 0 #2e2e2e, 
+  0px 2px 0 #2c2c2c, 
+  0px 3px 0 #2a2a2a, 
+  0px 4px 0 #282828, 
+  0px 5px 0 #262626, 
+  0px 6px 0 #242424, 
+  0px 7px 0 #222, 
+  0px 8px 0 #202020, 
+  0px 9px 0 #1e1e1e, 
+  0px 10px 0 #1c1c1c, 
+  0px 11px 0 #1a1a1a, 
+  0px 12px 0 #181818, 
+  0px 13px 0 #161616, 
+  0px 14px 0 #141414, 
+  0px 15px 0 #121212,
+  2px 20px 5px rgba(0, 0, 0, 0.5),
+  5px 23px 5px rgba(0, 0, 0, 0.3),
+  8px 27px 8px rgba(0, 0, 0, 0.4),
+  8px 28px 35px rgba(0, 0, 0, 0.5);
+}
+
+.imgCenter{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 100;
+}
+.centered {
+  position: absolute;
+  top: 37%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Archivo Black', sans-serif;
+}
 .startSection{
     background-color: red;
 }
@@ -60,17 +97,20 @@ body {
 .diffChoose{font-size: 35px;
 }
 .label-style {
-  width: 125px;
+  width: 280px;
+  height: 280px;
   text-align: center;
+  padding: 5px;
+  background-image: linear-gradient(180deg, #273958 10%, #13061f);
 }
 .label-checked{
   width: 125px;
   text-align: center;
 }
-.label-style:active{color: wheat;}
+/*.label-style:active{color: wheat;}
 .label-style:hover{
     background-color: rgb(157, 164, 157);
-}
+}*/
 .buton-style {
   display: flex;
   justify-items: center;

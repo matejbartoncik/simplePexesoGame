@@ -26,32 +26,35 @@
         <a href="#" class="">About me</a>
     </div>
     </nav>
-    <section name="startSection" class=" bg-blue-200">
-      <div class="imgCenter">
-        <h2 class="text-violet-500 text-6xl">Pexeso</h2>
+    <section name="startSection" class=" bg-blue-100">
+      <div class="relative text-center  ">
+        <img src="images/PexesoBG.jpg" alt="" class="imgCenter">
+        <h2 class="text-orange-400 extraLarge centered dropShadow borderCustom">PEXESO</h2>
+        <h3 class="text-orange-400 text-7xl centered top-2/3 dropShadow borderCustom">GAME</h3>
       </div>
       <p class="center-align diffSetting">Vyberte obtížnost:</p>
+
       
-      <div class="diffChoose">
+      <div class="diffChoose flex gap-10 justify-center">
 
-        <div class="flex justify-center">
-          <label class="label-style" onclick="changeBackground()" name="label">
-            <input type="radio" class="hidden" name="difficulty" />
-            <p class="bg-violet-200 my-1 text-center">Lehká</p>
+        <div class="inline-flex justify-center p-2">
+          <label class="label-style flex flex-col" name="label">
+            <input type="radio" class="hidden" name="difficulty"/>
+            <p class="text-white mt-auto ">Easy</p>
           </label>
         </div>
 
-        <div class="flex justify-center ">
-          <label class="label-style" name="label" >
-            <input type="radio" class="hidden" name="difficulty" />
-            <p class="bg-violet-200 my-1 ">Střední</p>
+        <div class="inline-flex justify-center p-2">
+          <label class="label-style flex flex-col border" name="label" >
+            <input type="radio" class="hidden" name="difficulty"/>
+            <p class=" text-white mt-auto ">Medium</p>
           </label>
         </div>
 
-        <div class="flex justify-center">
-          <label class="label-style" onclick="changeBackground()" name="label">
-            <input type="radio" class="hidden" name="difficulty" />
-            <p class="bg-violet-200 my-1">Těžká</p>
+        <div class="inline-flex justify-center p-2">
+          <label class="label-style flex flex-col" name="label">
+            <input type="radio" class="hidden" name="difficulty"/>
+            <p class="text-white mt-auto ">Hard</p>
           </label>
         </div>
       </div>
