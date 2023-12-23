@@ -9,7 +9,7 @@
 }
 body {
   background-color: #08082b;
-  height: 980px;
+  height: fit-content;
 }
 
 
@@ -68,10 +68,10 @@ body {
 }
 
 .imgCenter{
-  display: block;
+  display: inline;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 100%;
   height: 100;
 }
 .centered {
@@ -97,20 +97,32 @@ body {
 .diffChoose{font-size: 35px;
 }
 .label-style {
+  transition: all 0.5s ease;
   width: 280px;
   height: 280px;
   text-align: center;
   padding: 5px;
   background-image: linear-gradient(180deg, #273958 10%, #13061f);
 }
-.label-checked{
-  width: 125px;
-  text-align: center;
-}
-/*.label-style:active{color: wheat;}
 .label-style:hover{
-    background-color: rgb(157, 164, 157);
-}*/
+  transition: all 0.5s ease;
+  scale: 1.02;
+  width: 280px;
+  height: 280px;
+  text-align: center;
+  padding: 5px;
+  background-image: linear-gradient(180deg, #2b3d5a 10%, #140920);
+}
+.label-checked{
+  transition: all 0.5s ease;
+  scale: 1.05;
+  width: 280px;
+  height: 280px;
+  text-align: center;
+  padding: 5px;
+  background-image: linear-gradient(180deg, #273958 10%, #13061f);
+}
+
 .buton-style {
   display: flex;
   justify-items: center;
