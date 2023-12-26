@@ -3,7 +3,7 @@ const difficulty = document.getElementsByName("difficulty");
 const startSection = document.getElementsByName("startSection");
 const gameDesk = document.getElementsByName("gameBoard");
 const gameBoard = document.getElementById("memory-game");
-
+const navBar = document.getElementById("navbar")
 
 window.addEventListener("onload", function () {
   for (let i = 0; i < difficulty.length; i++) {
@@ -13,6 +13,7 @@ window.addEventListener("onload", function () {
 
 function startGame() {
   startSection[0].style.display = "none";
+  navBar.style.display="none";
   gameDesk[0].style.display = "block";
   pairsMatchDiff();
   playerSwitch()
