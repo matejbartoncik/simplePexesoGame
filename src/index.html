@@ -3,96 +3,124 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <link rel="stylesheet" href="/CSS/styles.css"> 
-    <link rel="stylesheet" href="/CSS/output.css">
+    <link rel="stylesheet" href="/CSS/styles.css" />
+    <link rel="stylesheet" href="/CSS/output.css" />
     <link rel="stylesheet" href="/CSS/media-querry.css" />
     <title>Pexeso game</title>
   </head>
   <body>
-
-    <nav name="navbar" class= "h-25 flex startSection justify-evenly font-setter bg-slate-200 items-center font-medium">
-      <h1 class="text-5xl inline-flex font-bold">Khaoli</h1>
-      
-      <div name="playAGame" class=" w-fit h-11 bg-orange-400 text-2xl inline-flex padX2 m-9 border-2 border-orange-300 items-center
-      NavButton 
-      rounded-full">
-      <a href="index.html" class="">Play a game</a>
-    </div>
-    
-    <div name="About us" class="  w-fit h-11 bg-orange-400 text-2xl inline-flex padX2 m-9 border-2 border-orange-300 
-    NavButton 
-    rounded-full
-    ">
-    <a href="#" class="">About me</a>
-  </div>
-</nav>
-
-<section name="startSection" class=" bg-blue-100 flex justify-center items-center flex-col border border-transparent rounded">
-<div name="wrapper" class="bg-slate-200 w-fit ">
-
-  <div class="relative text-center ">
-    <img src="images/PexesoBG.jpg" alt="" class="imgCenter border border-transparent rounded">
-    <h2 class="text-orange-400 extraLarge  dropShadow borderCustom flex centered">PEXESO</h2>
-    <h3 class="text-orange-400 text-7xl  top-2/3 dropShadow borderCustom centered">GAME</h3>
-  </div>
-  <div class="bg-inherit justify-center flex">
-    <p class=" diffSetting inline border-4 border-black px-3 bg-slate-400">Choose difficulty</p>
-  </div>
-  
-  
-  <div class="diffChoose flex gap-10 justify-center">
-    
-    <div class="inline-flex justify-center p-2" onclick="changeBackground()">
-      <label class="label-style flex flex-col border border-transparent rounded-lg" name="label">
-        <input type="radio" class="hidden" name="difficulty"/>
-        <p class="text-white mt-auto">Easy</p>
-      </label>
-    </div>
-    
-    <div class="inline-flex justify-center p-2" onclick="changeBackground()">
-      <label class="label-style flex flex-col border border-transparent rounded-lg" name="label" >
-        <input type="radio" class="hidden" name="difficulty"/>
-        <p class=" text-white mt-auto ">Medium</p>
-      </label>
-    </div>
-    
-    <div class="inline-flex justify-center p-2" onclick="changeBackground()">
-      <label class="label-style flex flex-col border border-r-transparent rounded-lg"  name="label">
-        <input type="radio" class="hidden" name="difficulty"/>
-        <p class="text-white mt-auto ">Hard</p>
-      </label>
-    </div>
-  </div>
-  
-  <div class="center-align">
-    <button
-    id="start-button"
-    onclick="startGame()"
-    class="center-align buton-style"
+    <nav
+      name="navbar"
+      class="h-25 flex startSection justify-evenly font-setter bg-slate-200 items-center font-medium"
     >
-    Začít hru
-  </button>
-</div>
-</div>
-</section>
+      <h1 class="text-5xl inline-flex font-bold">Khaoli</h1>
+
+      <div
+        name="playAGame"
+        class="w-fit h-11 bg-orange-400 text-2xl inline-flex padX2 m-9 border-2 border-orange-300 items-center NavButton rounded-full"
+      >
+        <a href="index.html" class="">Play a game</a>
+      </div>
+
+      <div
+        name="About us"
+        class="w-fit h-11 bg-orange-400 text-2xl inline-flex padX2 m-9 border-2 border-orange-300 NavButton rounded-full"
+      >
+        <a href="#" class="">About me</a>
+      </div>
+    </nav>
+
+    <section
+      name="startSection"
+      class="bg-blue-100 flex justify-center items-center flex-col border border-transparent rounded"
+    >
+      <div name="wrapper" class="bg-slate-200 w-fit">
+        <div class="relative text-center">
+          <img
+            src="images/PexesoBG.jpg"
+            alt=""
+            class="imgCenter border border-transparent rounded"
+          />
+          <h2
+            class="text-orange-400 extraLarge dropShadow borderCustom flex centered"
+          >
+            PEXESO
+          </h2>
+          <h3
+            class="text-orange-400 text-7xl top-2/3 dropShadow borderCustom centered"
+          >
+            GAME
+          </h3>
+        </div>
+
+        <div class="diffChoose flex gap-10 justify-center mt-4">
+          <div
+            class="inline-flex justify-center p-2"
+            onclick="changeBackground()"
+          >
+            <label
+              class="label-style flex flex-col border border-transparent rounded-lg"
+              name="label"
+            >
+              <input type="radio" class="hidden" name="difficulty" />
+              <p class="text-white mt-auto">Easy</p>
+            </label>
+          </div>
+
+          <div
+            class="inline-flex justify-center p-2"
+            onclick="changeBackground()"
+          >
+            <label
+              class="label-style flex flex-col border border-transparent rounded-lg"
+              name="label"
+            >
+              <input type="radio" class="hidden" name="difficulty" />
+              <p class="text-white mt-auto">Medium</p>
+            </label>
+          </div>
+
+          <div
+            class="inline-flex justify-center p-2"
+            onclick="changeBackground()"
+          >
+            <label
+              class="label-style flex flex-col border border-r-transparent rounded-lg"
+              name="label"
+            >
+              <input type="radio" class="hidden" name="difficulty" />
+              <p class="text-white mt-auto">Hard</p>
+            </label>
+          </div>
+        </div>
+
+        <div class="flex justify-center">
+          <button
+            id="start-button"
+            onclick="startGame()"
+            class="NavButton w-fit bg-orange-400 text-5xl padX2 m-9 border-2 border-orange-300"
+          >
+            Začít hru
+          </button>
+        </div>
+      </div>
+    </section>
 
     <section name="gameBoard" style="display: none">
-     
       <div class="center-align">
         <section name="playerSection" id="playerSection2">
-          <div class="player2" id="player2">Hráč 2
+          <div class="player2" id="player2">
+            Hráč 2
             <div class="player2Score" id="player2Score">2</div>
           </div>
         </section>
-        <section name = "playerSection" id="playerSection">
-          <div class="player1" id="player1">Hráč 1
+        <section name="playerSection" id="playerSection">
+          <div class="player1" id="player1">
+            Hráč 1
             <div class="player1Score" id="player1Score">0</div>
           </div>
         </section>
-        <div id="memory-game" class="">
-        
-        </div>
-       
+        <div id="memory-game" class=""></div>
       </div>
     </section>
 

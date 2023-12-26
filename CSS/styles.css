@@ -98,8 +98,8 @@ body {
 }
 .label-style {
   transition: all 0.5s ease;
-  width: 280px;
-  height: 280px;
+  width: 220px;
+  height: 220px;
   text-align: center;
   padding: 5px;
   background-image: linear-gradient(180deg, #273958 10%, #13061f);
@@ -107,17 +107,17 @@ body {
 .label-style:hover{
   transition: all 0.5s ease;
   scale: 1.02;
-  width: 280px;
-  height: 280px;
+  width: 220px;
+  height: 220px;
   text-align: center;
   padding: 5px;
   background-image: linear-gradient(180deg, #2b3d5a 10%, #140920);
 }
 .label-checked{
   transition: all 0.5s ease;
-  scale: 1.05;
-  width: 280px;
-  height: 280px;
+  scale: 1.07;
+  width: 220px;
+  height: 220px;
   text-align: center;
   padding: 5px;
   background-image: linear-gradient(180deg, #273958 10%, #13061f);
